@@ -37,7 +37,7 @@ length(unique(sales$custname)) # no of unique customers
 length(unique(sales$region )) # no of distinct regions
 
 #Information Required----
-# 1. Who are the most loyal Customers - What to do : Improve repeated sales, Target customers with low sales Volumes
+# 1. Who are the most loyal Customers - What to do : Improve repeated sales, Target customers with low sales Volumes (max revenue,max time cust came)
 # 2. Which customers contribute the most to their revenue : How do I retain these customers & target incentives
 # 3a. What part numbers bring in to significant portion of revenue : Maximise revenue from high value parts
 # 3b. What parts have the highest profit margin : What parts are driving profits & what parts need to build further
