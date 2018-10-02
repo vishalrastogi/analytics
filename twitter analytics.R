@@ -53,7 +53,7 @@ mentions(n=15)   # my tags
 mentions(n=5)
 
 #for user - 
-(tweets = userTimeline("sumanmohanty", n=10))
+(tweets = userTimeline("Vishal1292", n=10))
 userTimeline("drisha_sinha", n=5)
 
 #------------------------------------
@@ -61,12 +61,14 @@ userTimeline("drisha_sinha", n=5)
 tweets = userTimeline("realDonaldTrump", n=100)
 #english
 tweets[1:5]
+tweets
+
 n.tweet <- length(tweets)
 n.tweet
 tweets.df = twListToDF(tweets) 
 head(tweets.df)
 summary(tweets.df)
-
+str(tweets.df)
 #Remove hashtags & unnecessary characters
 tweets.df2 <- gsub("http.*","",tweets.df$text)
 tweets.df2 <- gsub("https.*","",tweets.df2)
@@ -76,6 +78,7 @@ tweets.df2 <- gsub("@.*","",tweets.df2)
 head(tweets.df2)
 #-----
 library("syuzhet") #library for sentiment analysis - comparison
+
 word.df <- as.vector(tweets.df2)
 emotion.df <- get_nrc_sentiment(word.df)
 emotion.df2 <- cbind(tweets.df2, emotion.df) 
